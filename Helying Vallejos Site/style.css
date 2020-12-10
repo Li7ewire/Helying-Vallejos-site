@@ -1,0 +1,223 @@
+/*
+Configuracion general
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --body-font: 'Quicksand' , sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.container {
+	width: 1300px;
+	margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+
+/*
+LOGO
+*/
+
+header #h_logo img{
+    width: 35px;
+    left: 50px;
+    top: 5px;
+    position: fixed;
+}
+
+/*
+redes sociales
+*/
+
+#cont_barra_superior {
+    justify-content: space-between;
+	padding: 7px 0;
+}
+
+#menu_redes li {
+	list-style: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+#menu_redes li i {
+    color: white;
+}
+
+/*
+Presentacion y nombre
+*/
+
+#presentation {
+    top: 250px;
+    position: relative;
+}
+#presentation em{
+    font-style: italic;
+    font-size: 25px;
+    position: relative;
+    left: 135px;
+}
+#presentation .btn-menu strong{
+    font-style: normal;
+    font-size: 35px;
+    position: relative;
+    left: 100px;
+} 
+
+#btn-menu{
+    display: none;
+}
+
+.btn-menu label{
+    color:#c7c7c7;
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+/*
+barra lateral y efectos
+*/
+
+.menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked ~ .menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: black;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    border-radius: .5rem;
+}
+
+#btn-menu:checked ~ .menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav {
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all  400ms ease;
+    font-family: var(--body-font);
+    font-weight: 700;
+}
+
+.cont-menu nav a:hover{
+    background: #95190C;
+    border-radius: .5rem;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: -7px;
+    top: 15px;
+    color: #c7c7c7;
+    cursor: pointer;
+}
+.cont-menu label:hover {
+    background-color: #95190C;
+    border-radius: 50%;
+}
+
+.cont-menu p{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: #c7c7c7;
+    bottom: 3%;
+    left: 63px;
+    position: fixed;
+}
+
+/*
+boton acerca de mi
+*/
+
+#down-button .about-button{
+    position: fixed;
+    bottom: 30px;
+    left: 45%;
+    color: #c7c7c7;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    border: 1px solid #c7c7c7;
+    height: 50px;
+    width: 130px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .5s;
+}
+#down-button .about-button p strong{
+    font-family: var(--body-font);
+    font-weight: 900;
+}
+
+#down-button .about-button:hover {
+    background: #95190C;
+}
+
+#down-button .about-button:before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    position: absolute;
+    background: #c7c7c7;
+    left: 200px;
+    bottom: 25px;
+    cursor: default;
+}
+
+#down-button .about-button:after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    position: absolute;
+    background: #c7c7c7;
+    right: 200px;
+    bottom: 25px;
+    cursor: default;
+}
+
